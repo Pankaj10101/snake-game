@@ -44,9 +44,13 @@ function isCollide(snake){
 let musicPlaying = false;
 
 function playMusic() {
-  musicPlaying = true;
-  musicSound.play();
-}
+    musicPlaying = true;
+    musicSound.play();
+    gameEngine(); // add this line
+  }
+  
+  playMusic(); // call playMusic() immediately after it's defined
+  
 
 document.addEventListener("click", playMusic, { once: true });
 function gameEngine(){
